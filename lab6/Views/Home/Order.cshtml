@@ -1,0 +1,13 @@
+﻿@page
+@model lab6.Views.Home.OrderModel
+@{
+}
+<form asp-action="Order" method="post">
+    <input type="hidden" name="userId" value="@ViewBag.UserId" />
+
+    <label>Скільки одиниць товару ви бажаєте замовити?</label>
+    <input type="number" name="quantity" min="1" />
+
+    <button type="submit">Підтвердити</button>
+</form>
+

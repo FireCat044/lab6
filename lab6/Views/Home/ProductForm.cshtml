@@ -1,0 +1,17 @@
+﻿@page
+@model lab6.Views.Home.ProductFormModel
+@{
+}
+<form asp-action="ProductForm" method="post">
+    @for (int i = 0; i < ViewBag.Quantity; i++)
+    {
+        <div>
+            <label>Назва продукту:</label>
+            <input type="text" name="products[@i].Name" />
+
+            <label>Ціна:</label>
+            <input type="number" name="products[@i].Price" step="0.01" />
+        </div>
+    }
+    <button type="submit">Замовити</button>
+</form>
